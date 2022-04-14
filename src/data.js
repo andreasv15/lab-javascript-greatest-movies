@@ -1,3 +1,5 @@
+const vacio = [];
+
 const movies = [
   {
     title: 'The Shawshank Redemption',
