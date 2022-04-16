@@ -106,16 +106,15 @@ function orderByYear( arrayMovies ) {
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 function orderAlphabetically( arrayMovies ) {
   
-  let copyArrAlfa = JSON.parse(JSON.stringify(arrayMovies));
-  
-  let arrTitles = arrayMovies.map(  (eachElem) => {
-    return eachElem.title;
-  })
-  
-  arrTitles.sort();
+  arrayMovies.sort( (elem1, elem2) => {
+    if (elem1.title > elem2.title) {
+      return 1;
+    } else {
+      return -1;
+    }
+  } );
 
-  return arrTitles.slice(0,20);
-
+  return arrayMovies.slice(0,20);
 }
 //console.log(orderAlphabetically(movies))
 
